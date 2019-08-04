@@ -5,6 +5,10 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                sh '''#!/bin/bash
+
+                    python test.py
+                '''
             }
         }
         stage('Test') {
